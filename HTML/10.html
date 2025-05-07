@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTable</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    background: rgba( 71, 147, 227, 1);
+}
+h2{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    padding: 30px 0;
+}
+
+/* Table Styles */
+
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <h2>Time Table</h2>
+<div class="table-wrapper">
+    <table class="fl-table" border="1">
+        <thead>
+        <tr>
+            <th >TIME</th>
+            <th >Particular</th>
+            <th >MONDAY</th>
+            <th >TUESDAY</th>
+            <th >WEDNESDAY</th>
+            <th >THURSDAY</th>
+            <th>FRIDAY</th>
+            <th >SATURDAY</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td  rowspan="3"> 10.00 TO 11.00 </td>
+            <td>Course Code</td>
+            <td>CS154</td>
+            <td></td>
+            <td rowspan="6" >ENG209-BatchA2<br>VP<br>504<br>CS158-BatchA1<br>SP<br>505</td>
+            <td rowspan="6" >CS194-BatchA1<br>SP<br>303<br>ENG208-BatchA2<br>UP<br>A402</td>
+            <td rowspan="6" >CS194-BatchA2<br>SP<br>504<br>ENG208-BatchA1<br>UP<br>A402</td>
+            <td></td>
+    </tr>
+    <tr>
+            <td>Faculty Name</td>
+            <td>SS</td>
+            <td></td>
+            <td></td>
+    </tr>
+    <tr>
+            <td>Room No.</td>
+            <td>511</td>
+            <td></td>
+            <td></td>
+    </tr>
+    <tr>
+        <td rowspan="3"> 11.00 TO 12.00</td>
+        <td>Course Code</td>
+        <td>CS193</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>Faculty Name</td>
+        <td>SV</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>Room No.</td>
+        <td>511</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td rowspan="3"> 12.00 TO 13.00</td>
+        <td>Course Code</td>
+        <td>CS157</td>
+        <td></td>
+        <td>CS154</td>
+        <td>CS154</td>
+        <td>CS193</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>Faculty Name</td>
+        <td>YC</td>
+        <td></td>
+        <td>SS</td>
+        <td>SS</td>
+        <td>SV</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>Room No.</td>
+        <td>511</td>
+        <td></td>
+        <td>507</td>
+        <td>507</td>
+        <td>511</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td rowspan="3"> 13.00 TO 14.00</td>
+        <td>Course Code</td>
+        <td colspan="6" rowspan="3"><b>LUNCH BREAK</b></td>
+    </tr>
+
+    <tr>
+        <td>Faculty Name</td>
+    </tr>
+
+    <tr>
+        <td>Room No.</td>
+    </tr>
+
+    <tr>
+        <td rowspan="3"> 14.00 TO 15.00</td>
+        <td >Course Code</td>
+        <td rowspan="6">CS194-BatchA1<br>SV<br>303<br>CS158-BatchA2<br>SP<br>702</td>
+        <td></td>
+        <td></td>
+        <td>ENG207</td>
+        <td rowspan="6">ENG-BatchA1<br>VP<br>504<br>CS194-BatchA2<br>SV<br>303</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>Faculty Name</td>
+        <td></td>
+        <td></td>
+        <td>UP</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td >Room No.</td>
+        <td></td>
+        <td></td>
+        <td>511</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td rowspan="3"> 15.00 TO 16.00</td>
+        <td>Course Code</td>
+        <td></td>
+        <td></td>
+        <td>ENG209</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>Faculty Name</td>
+        <td></td>
+        <td></td>
+        <td>VP</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>Room No.</td>
+        <td></td>
+        <td></td>
+        <td>511</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td rowspan="3"> 16.00 TO 17.00</td>
+        <td>Course Code</td>
+        <td>ENG207</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>CS157</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>Faculty Name</td>
+        <td>UP</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>YC</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>Room No.</td>
+        <td>511</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>501</td>
+        <td></td>
+    </tr>
+</tbody>
+</table>
+</body>
+</html>
+

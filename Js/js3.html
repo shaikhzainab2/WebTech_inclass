@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>javascript for Validation</h2>
+        <p>Pls input a number btw 1 to 10 : </p>
+        <input id = "number">
+        <button type = "button" onclick="myFunction()">Submit</button>
+        <p id="demo"></p>
+        <script>
+            function myFunction(){
+                //Get the value of the input field with id=="numb"
+                let x=document.getElementById("number").value;
+                //If x is Not a Number of less than one or greater than 10
+                let text;
+                if (isNaN(x) || x<1 || x>10){
+                    text="Input not valid";
+                }
+                else{
+                    text="Input OK";
+                }
+                document.getElementById("demo").innerHTML=text;
+            }
+        </script>
+    </body>
+</html>
